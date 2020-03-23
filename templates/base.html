@@ -9,10 +9,10 @@
     <title> {% block titulo %} {% endblock %} </title>
 </head>
 <body>
-    <div class="cabecalho">
+    <div class="header">
         <ul class="menu">
-            <li><img src="{% static 'img/logo.png' %}" alt="Logotipo"/></li>
-            <li><img src="{% static 'img/cadastro.png' %}" alt="Cadastro"></li>
+            <li><a href="/"><img src="{% static 'img/logo.png' %}" alt="Home" class="icon"/></a></li>
+            <li><a href="cadastro"><img src="{% static 'img/cadastro.png' %}" alt="Cadastro" class="icon"/></a></li>
         </ul>
     </div>
     <main class="content">
