@@ -60,7 +60,7 @@ table.tabela tr:hover{
     background-color: steelblue;
     color:whitesmoke;
 }
-table.tabela-alterar{
+/* table.tabela-alterar{
     position: relative;
     width: 70%;
     display:inline-block;
@@ -103,3 +103,8 @@ input[type="file"].img-perfil{
     height: 100px;
     background-image: url('../img/default.png');
 }
+input[type="text"], [type="email"], [type="date"]{
+    width: 100%;
+    padding:5px;
+    border: 0px;
+} */

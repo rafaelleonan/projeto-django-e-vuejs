@@ -18,7 +18,7 @@ def cadastro(request):
         if form.is_valid():
             print(form.cleaned_data.get("foto"))
             form.save()
-            return redirect('/')
+            return redirect('/lista')
         else:
             return render(request, "cadastro.html", {"form":form})
     else:
@@ -27,4 +27,14 @@ def cadastro(request):
 
 def alterar(request, id):
     usuario = get_object_or_404(Usuario, pk=id)
-    return render(request, "alterar.html", {"usuario":usuario})
+    form = FormUsuario(instance=usuario)
+    if request.method == 'POST':
+        form = FormUsuario(request.POST, request.FILES, instance=usuario)
+        if(form.is_valid()):
+            usuario.save()
+            return redirect('/lista')
+        else:
+            return render(request, 'alterar.html', {'form': form, 'usuario':usuario})
+            
+    else:
+        return render(request, 'alterar.html', {'form': form, 'usuario':usuario})
