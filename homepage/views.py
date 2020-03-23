@@ -3,7 +3,7 @@ from .models import Usuario
 from .forms import FormUsuario
 
 
-def index(request):
+def lista(request):
     usuario = Usuario.objects.all()
     return render(request, "index.html", {"usuarios":usuario})
 
@@ -24,3 +24,7 @@ def cadastro(request):
     else:
         form = FormUsuario()
     return render(request, "cadastro.html", {"form":form})
+
+def alterar(request, id):
+    usuario = get_object_or_404(Usuario, pk=id)
+    return render(request, "alterar.html", {"usuario":usuario})

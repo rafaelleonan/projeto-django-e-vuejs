@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Alterar dados {% endblock %}
+
+{% block main %}
+<fieldset class="fieldset-info">
+    <legend>Minhas Info</legend>
+    <table class="tabela-alterar">
+        <tr>
+            <td>Nome:</td><td>{{ usuario.nome }}</td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento:</td><td>{{ usuario.data_nasc }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td><td>{{ usuario.email }}</td>
+        </tr>
+    </table>
+    <div class="div-img">
+        <img src="{{ usuario.foto.url }}" alt="Foto perfil" class="img-perfil"/>
+    </div>
+</fieldset>
+<fieldset class="fieldset-info">
+    <legend>Alterar</legend>
+    <table class="tabela-alterar">
+        <tr>
+            <td>Nome:</td><td><input type="text" placeholder="Novo nome..."/></td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento:</td><td><input type="date"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td><td><input type="email" placeholder="Novo email..."/></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Enviar</button>
+                <button><a href="/lista">Voltar</a></button>
+            </td>
+        </tr>
+    </table>
+    <div class="div-img">
+        <input type="file" class="img-perfil"/>
+    </div>
+</fieldset>
+{% endblock %}
