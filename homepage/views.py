@@ -14,8 +14,9 @@ def delete(request, id):
 
 def cadastro(request):
     if request.method == 'POST':
-        form = FormUsuario(request.POST)
+        form = FormUsuario(request.POST, request.FILES)
         if form.is_valid():
+            print(form.cleaned_data.get("foto"))
             form.save()
             return redirect('/')
         else:
