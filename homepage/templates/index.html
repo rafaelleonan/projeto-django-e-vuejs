@@ -3,5 +3,21 @@
 {% block titulo %} Página Inicial {% endblock %}
 
 {% block main %}
-<h1>Deu certo</h1>
+<table class="tabela">
+    <caption>Lista de Usuários</caption>
+    <thead>
+        <th>Nome</th><th>Data nascimento</th><th>Email</th><th>Foto</th>
+    </thead>
+    {% for usuario in usuarios %}
+    <tbody>
+        <tr>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.data_nasc }}</td>
+            <td>{{ usuario.email }}</td>
+            <td><img src="{{ usuario.foto.url }}" alt="Foto usuário" class="foto-usuario"/></td>
+            <td><a href="delete/{{ usuario.id }}">Deletar</a></td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
 {% endblock %}
