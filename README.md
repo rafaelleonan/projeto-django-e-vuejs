@@ -2,8 +2,8 @@
 > Projeto Python3 na web com o Framework Django e Vue Js
 
 ## Configurações do projeto
-### É recomendável isolar todo esse projeto em um ambiente Virtual(Miniconda),link do ambiente: https://docs.conda.io/en/latest/miniconda.html 
-#### Todos os passos a seguir são feitos no cmd do Windows
+### É recomendável isolar todo esse projeto em um ambiente Virtual(Miniconda),link para instalação do ambiente virtual: https://docs.conda.io/en/latest/miniconda.html 
+#### Todos os passos a seguir são feitos no cmd do Windows e com o ambiente virtual já instalado.
 
 ``` bash
 
