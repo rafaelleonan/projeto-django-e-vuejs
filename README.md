@@ -1,5 +1,5 @@
 # Python em Django com Vue Js
-> Projeto Python3 na web com o Framework Django e Vue Js
+> Projeto CRUD simples com Python3 em Django e Vue Js.
 
 ## Configurações do projeto
 ### É recomendável isolar todo esse projeto em um ambiente Virtual(Miniconda),link para instalação do ambiente virtual: https://docs.conda.io/en/latest/miniconda.html 
@@ -34,4 +34,6 @@ pip install Pillow
 python manage.py runserver
 
 ```
+
+Obs: O projeto ainda não possui, Vue Js. Irei implementar aos poucos.
 
