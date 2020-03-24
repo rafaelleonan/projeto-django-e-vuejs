@@ -10,7 +10,7 @@ def lista(request):
 def delete(request, id):
 	usuario = get_object_or_404(Usuario, pk=id)
 	usuario.delete()
-	return redirect('/')
+	return redirect('/lista')
 
 def cadastro(request):
     if request.method == 'POST':
