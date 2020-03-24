@@ -35,5 +35,8 @@ python manage.py runserver
 
 ```
 
+### Após executar o projeto, vá até o navegador e digite na URL, http://localhost:8000/lista/
+
+
 Obs: O projeto ainda não possui, Vue Js. Irei implementar aos poucos.
 
