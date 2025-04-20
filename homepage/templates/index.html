@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %} Página Inicial {% endblock %}
 
@@ -16,8 +17,16 @@
             <td>{{ usuario.data_nasc }}</td>
             <td>{{ usuario.email }}</td>
             <td><img src="{{ usuario.foto.url }}" alt="Foto usuário" class="icon"/></td>
-            <td class="conf"><a href="/lista/delete/{{ usuario.id }}">Deletar</a></td>
-            <td class="conf"><a href="/lista/alterar/{{ usuario.id }}">Alterar</a></td>
+            <td class="conf">
+                <a href="/lista/delete/{{ usuario.id }}">
+                    <img src="{% static 'img/deletar.png' %}" alt="Apagar usuário" class="icon"/>
+                </a>
+            </td>
+            <td class="conf">
+                <a href="/lista/alterar/{{ usuario.id }}">
+                    <img src="{% static 'img/alterar.png' %}" alt="Apagar usuário" class="icon"/>
+                </a>
+            </td>
         </tr>
     </tbody>
     {% endfor %}

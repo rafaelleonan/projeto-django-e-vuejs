@@ -37,3 +37,13 @@ python manage.py runserver
 
 ### Após executar o projeto, vá até o navegador e digite na URL, http://localhost:8000/lista/
 
+# Executando com DOCKER
+1. Gerando build
+``` bash
+docker build -t crud-django-II .
+```
+
+2. Executando container
+``` bash
+docker run -p 8000:8000 my-django-app
+```
