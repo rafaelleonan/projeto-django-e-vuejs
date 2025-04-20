@@ -45,5 +45,5 @@ docker build -t crud-django-II .
 
 2. Executando container
 ``` bash
-docker run -p 8000:8000 my-django-app
+docker run -p 8000:8000 crud-django-II
 ```
